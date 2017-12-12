@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Johan/.oh-my-zsh
 
+source ~/.env.keys
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -53,7 +55,7 @@ ZSH_THEME="lucyon"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# Old: 
+# Old:
 plugins=(git brew bower node npm yarn heroku zsh-autosuggestions)
 
 # User configuration
@@ -90,7 +92,7 @@ source $ZSH/oh-my-zsh.sh
 
 # from http://jilles.me/badassify-your-terminal-and-shell/
 . `brew --prefix`/etc/profile.d/z.sh
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export NVM_DIR="/Users/Johan/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
