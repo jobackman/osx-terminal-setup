@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Johan/.oh-my-zsh
 
-source ~/.env.keys
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -56,7 +54,7 @@ ZSH_THEME="lucyon"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Old:
-plugins=(git brew bower node npm yarn heroku zsh-autosuggestions)
+plugins=(git brew bower node yarn heroku zsh-autosuggestions)
 
 # User configuration
 
@@ -94,18 +92,42 @@ source $ZSH/oh-my-zsh.sh
 . `brew --prefix`/etc/profile.d/z.sh
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="/Users/Johan/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # yarn
 # export PATH="$PATH:$HOME/.yarn/bin"
 # export PATH=/Users/Johan/.nvm/versions/node/v6.9.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/Johan/.yarn/bin:/Users/Johan/.vimpkg/bin
 # export PATH="$PATH:`yarn global bin`"
 # export PATH="$PATH:/opt/yarn-[version]/bin"
-export PATH="$(yarn global bin):$PATH"
+# export PATH="$(yarn global bin):$PATH"
+
+# nvm stuff
+export NVM_DIR="/Users/Johan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+
+source ~/.env.keys
 
 # After install rvm
 source ~/.profile
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
