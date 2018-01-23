@@ -24,6 +24,8 @@
 	<integer>262401</integer>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Git/osx-terminal-setup/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -65,13 +67,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>929 110 445 332 0 0 1440 878 </string>
+	<string>73 458 636 198 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>60 281 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>424 81 1016 512 0 0 1440 900 </string>
+	<string>507 411 918 401 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>590 4 810 874 0 0 1440 878 </string>
+	<string>630 141 1434 752 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -642,7 +644,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 14</string>
+			<string>RobotoMonoForPowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -650,7 +652,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>2</integer>
 			<key>Rows</key>
-			<integer>100</integer>
+			<integer>200</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
