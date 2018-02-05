@@ -54,7 +54,7 @@ ZSH_THEME="lucyon"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Old:
-plugins=(git brew npm node bower osx heroku zsh-autosuggestions)
+plugins=(git brew node yarn osx zsh-autosuggestions)
 
 # User configuration
 
@@ -92,8 +92,15 @@ source $ZSH/oh-my-zsh.sh
 . `brew --prefix`/etc/profile.d/z.sh
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="/Users/Johan/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# For nvm install with brew
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+# Nvm installed with regular script
+# export NVM_DIR="/Users/Johan/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # .env.keys for deployment etc
 source ~/.env.keys
