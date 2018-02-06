@@ -1,5 +1,5 @@
 # Supa fresh dev terminal
-Should set up a fresh dev terminal, do it in order and it should work nicely.
+Should set up a fresh dev terminal. Do it in order and it should work nicely.
 
 ## Homebrew
 - [Install homebrew](https://brew.sh/index_se.html)
@@ -12,42 +12,50 @@ Should set up a fresh dev terminal, do it in order and it should work nicely.
 [Download and install](https://www.iterm2.com/downloads.html)
 ###
 To use my iterm2 profile open preferences. Under _General_ check the box for _Load preferences from a custom folder or URL_ and select the folder _iterm_ in this repo.
-### hardlink config files
-Hard link the terminal config files from the root of this repo.
-```bash
-ln ./config/.zshrc ~/.zshrc
-ln ./config/.profile ~/.profile
-ln ./config/.bash_profile ~/.bash_profile
-
-# optional: Link vim settings if you want my vim settings too.
-ln ./config/.vimrc ~/vimrc
-```
 
 ## zsh
 ```bash
 brew install zsh
 ```
-## oh-my-zsh
+## [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 ```bash
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+## hardlink zsh config files
+Hard link the terminal config files from the root of this repo. There might already be config files in your `~/` directory, in that case they need to be deleted before you can hardlink.
+
+Either run the `link-configs.sh` which hard links all the below, or link what suits you manually.
+
+I recommend linking the three first configs at least, since they will be used for all the other installations here. The _theme_ and the _vimrc_ are entirely optional.
+```bash
+ln ./config/.zshrc ~/.zshrc
+ln ./config/.profile ~/.profile
+ln ./config/.bash_profile ~/.bash_profile
+
+# optional: Places the custom theme in oh-my-zsh theme folder. Only works if there is a directory with the name, i.e. after you have installed oh-my-zsh. Choice of theme is set in the .zshrc file.
+ln ./config/lucyon.zsh-theme ~/.oh-my-zsh/themes/lucyon.zsh-theme
+
+# optional: Link vim settings if you want my vim settings too.
+ln ./config/.vimrc ~/vimrc
 ```
 
 ### oh-my-zsh plugins
 
 #### [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
-run script and add as plugin in the .zshrc file
+run script and add as plugin in the .zshrc file (already added if you hardlinked)
 ```bash
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 #### [zsh-auto-suggestions](https://github.com/zsh-users/zsh-autosuggestions#oh-my-zsh)
-run script and add as plugin in the .zshrc file
+run script and add as plugin in the .zshrc file (already added if you hardlinked)
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
 
 #### z
-Added as a plugin in the .zshrc file.
+Added as a plugin in the .zshrc file (already added if you hardlinked)
 
 ## RVM
 ```bash
@@ -121,4 +129,11 @@ brew cask install sourcetree
 ### spotify
 ```bash
 brew cask install spotify
+```
+
+# Help
+## Scripts wont run
+If you have problem running the shell scripts you need to allow them to be executable:
+```bash
+chmod +x ./file-name.sh
 ```
