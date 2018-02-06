@@ -1,14 +1,10 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Johan/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="mh"
-#ZSH_THEME="honukai"
-#ZSH_THEME="sorin"
-#ZSH_THEME="simple"
 ZSH_THEME="lucyon"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -54,7 +50,7 @@ ZSH_THEME="lucyon"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Old:
-plugins=(git brew node yarn osx zsh-autosuggestions)
+plugins=(git brew node yarn osx z zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -66,12 +62,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
-## else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -88,17 +79,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="subl ~/.zshrc"
 # alias ohmyzsh="subl ~/.oh-my-zsh"
 
-# from http://jilles.me/badassify-your-terminal-and-shell/
-. `brew --prefix`/etc/profile.d/z.sh
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # For nvm install with brew
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
-
-# Nvm installed with regular script
-# export NVM_DIR="/Users/Johan/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
