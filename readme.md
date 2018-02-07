@@ -1,6 +1,16 @@
 # Supa fresh dev terminal
 Should set up a fresh dev terminal. Do it in order and it should work nicely.
 
+## RVM
+```bash
+\curl -sSL https://get.rvm.io | bash -s stable
+```
+
+Then install some version of ruby with your rvm:
+```bash
+rvm install <some.version>
+```
+
 ## Homebrew
 - [Install homebrew](https://brew.sh/index_se.html)
 
@@ -57,15 +67,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 #### z
 Added as a plugin in the .zshrc file (already added if you hardlinked)
 
-## RVM
-```bash
-\curl -sSL https://get.rvm.io | bash -s stable
-```
-
-Then install some version of ruby with your rvm:
-```bash
-rvm install <some.version>
-```
 
 ### Github changelog generator
 ```bash
