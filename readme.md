@@ -19,9 +19,15 @@ rvm install <some.version>
 ```
 
 ## Iterm2
-[Download and install](https://www.iterm2.com/downloads.html)
-###
+```bash
+brew cask install iterm2
+```
+
+### iterm2 profile
 To use my iterm2 profile open preferences. Under _General_ check the box for _Load preferences from a custom folder or URL_ and select the folder _iterm_ in this repo.
+
+## [Powerline fonts](https://github.com/powerline/fonts)
+Some nice additional fonts suitable for terminals. Just [follow the instruction in the repo to install it.](https://github.com/powerline/fonts#quick-installation)
 
 ## zsh
 ```bash
