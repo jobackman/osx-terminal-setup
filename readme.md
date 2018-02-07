@@ -131,6 +131,11 @@ brew cask install sourcetree
 brew cask install spotify
 ```
 
+### appcleaner
+```bash
+brew cask install appcleaner
+```
+
 # Help
 ## Scripts wont run
 If you have problem running the shell scripts you need to allow them to be executable:
