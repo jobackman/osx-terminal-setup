@@ -109,6 +109,12 @@ vim +PluginInstall +qall
 
 
 ## Other useful brew casks
+
+### google chrome
+```bash
+brew cask install google-chrome
+```
+
 ### phraseapp
 ```bash
 brew tap phrase/brewed
