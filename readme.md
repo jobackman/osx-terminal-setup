@@ -108,11 +108,16 @@ vim +PluginInstall +qall
 ```
 
 
-## Other useful brew casks
+## Other useful brew formulas
 
 ### google chrome
 ```bash
 brew cask install google-chrome
+```
+
+### git
+```bash
+brew install git
 ```
 
 ### phraseapp
