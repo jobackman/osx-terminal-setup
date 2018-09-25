@@ -18,6 +18,8 @@ rvm install <some.version>
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+
+
 ## Iterm2
 ```bash
 brew cask install iterm2
@@ -116,6 +118,10 @@ vim +PluginInstall +qall
 
 
 ## Other useful brew formulas
+Either install them one by one or all at once with
+```
+brew bundle
+```
 
 ### google chrome
 ```bash
