@@ -111,7 +111,12 @@ yarn global add ember-cli-update
 yarn global add eslint
 ```
 ## Vim
-If you want to use the vim I've set up, (far from perfect but better then default imo), run the plugin installer based on my .vimrc file:
+If you want to use the vim I've set up, (far from perfect but better then default imo), run the plugin installer based on my .vimrc file. The bundler used for plugins also needs to be installed (Vundle):
+
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 ```bash
 vim +PluginInstall +qall
 ```
