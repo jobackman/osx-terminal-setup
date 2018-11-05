@@ -125,46 +125,9 @@ vim +PluginInstall +qall
 
 
 ## Other useful brew formulas
-Either install them one by one or all at once with
+Many applications I use are installed via homebrew, and if they are they're listed in the _Brewfile_. Either install them one by one or all at once with
 ```
 brew bundle
-```
-
-### google chrome
-```bash
-brew cask install google-chrome
-```
-
-### git
-```bash
-brew install git
-```
-
-### phraseapp
-```bash
-brew tap phrase/brewed
-brew install phraseapp
-```
-### ngrok
-```bash
-brew cask install ngrok
-```
-### hipchat
-```bash
-brew cask install hipchat
-```
-### sourcetree
-```bash
-brew cask install sourcetree
-```
-### spotify
-```bash
-brew cask install spotify
-```
-
-### appcleaner
-```bash
-brew cask install appcleaner
 ```
 
 # Help
