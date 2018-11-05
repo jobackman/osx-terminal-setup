@@ -115,7 +115,9 @@ If you want to use the vim I've set up, (far from perfect but better then defaul
 
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
+And then to install all the plugins: 
 
 ```bash
 vim +PluginInstall +qall
