@@ -14,6 +14,8 @@ function linkit {
   ln ./config/lucyon.zsh-theme ~/.oh-my-zsh/themes/lucyon.zsh-theme
   debug "./config/.vimrc --> ~/.vimrc"
   ln ./config/.vimrc ~/.vimrc
+  debug "./config/.zshrc-aliases --> ~/.zshrc-aliases"
+  ln ./config/.zshrc-aliases ~/.zshrc-aliases
   debug "Done!"
 }
 

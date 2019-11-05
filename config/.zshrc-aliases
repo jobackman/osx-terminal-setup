@@ -1,0 +1,1 @@
+alias gcfd="open -a 'Google Chrome' --args --use-fake-device-for-media-stream"
